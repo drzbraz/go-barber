@@ -13,8 +13,7 @@ class Database {
   init() {
     this.connection = new Sequelize(databaseConfig);
 
-    // eslint-disable-next-line arrow-parens
-    models.map(model => model.init(this.connection));
+    models.map((model) => model.init(this.connection));
   }
 }
 
